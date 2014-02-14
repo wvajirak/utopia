@@ -44,6 +44,13 @@
           <dbTableFile dbTableName="Customers"/>
           <dbTableFile dbTableName="Bookings"/>
         </dbTableDirectory>
+        <modelFile modelName="Customer"/>
+        <modelFile modelName="Booking"/>
+        <modelFile modelName="Coach"/>
+        <modelFile modelName="Tour"/>
+        <modelFile modelName="TourDate"/>
+        <modelFile modelName="ActiveTour"/>
+        <modelFile modelName="CoachType"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>

@@ -1,4 +1,36 @@
 <br /><br />
 <div id="view-content">
-	<p>View script for controller <b>CancelBooking</b> and script/action name <b>index</b></p>
+    <table class="table">
+        <th>
+            <tr><td>Customer ID</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>E Mail</td>
+            <td>Phone</td>
+            <td>Booking ID</td>
+            <td>ActiveTourID</td>
+            <td>Booking Date</td></tr>      
+        </th>
+
+<?php
+
+foreach($this->rows as $row) {
+    
+    
+ $id = $row['booking_id'];
+    echo "<tr>" ;
+    echo "<td>" . $row['customer_id'] . "</td>";
+    echo "<td>" . $row['name_f'] . "</td>";
+    echo "<td>" . $row['name_l'] . "</td>";
+    echo "<td>" . $row['email'] . "</td>";
+    echo "<td>" . $row['phone'] . "</td>";
+    echo "<td>" . $row['booking_id'] . "</td>";
+    echo "<td>" . $row['active_tour_id'] . "</td>";
+    echo "<td>" . $row['booking_dt'] . "</td>";
+    echo "<td><a href=\"/cancel-booking/cancel/id/$id\">Cancel Now</a></td>";
+    echo  "</tr>";
+    
+}
+?>
+    </table>
 </div>

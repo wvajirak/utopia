@@ -10,7 +10,8 @@ class CancelBookingController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $select = Application_Service_QueryHelper::bookingCustomerQuery();
+        $this->view->rows = $select->query()->fetchAll();
     }
 
     public function cancelAction()
