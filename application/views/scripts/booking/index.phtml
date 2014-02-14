@@ -1,4 +1,38 @@
 <br /><br />
 <div id="view-content">
-	<p>View script for controller <b>Booking</b> and script/action name <b>index</b></p>
+    <table class="table">
+        <th>
+            <tr><td>Tour ID</td>
+            <td>Capacity</td>
+            <td>Availability</td>
+            <td>Title</td>
+            <td>Date</td>
+            <td>ActiveTourID</td>
+            <td>Book</td></tr>      
+        </th>
+
+<?php
+
+foreach($this->rows as $row) {
+    
+    
+ $id = $row['active_tour_id'];
+    echo "<tr>" ;
+    echo "<td>" . $row['tour_id'] . "</td>";
+    echo "<td>" . $row['capacity'] . "</td>";
+    echo "<td>" . $row['availability'] . "</td>";
+    echo "<td>" . $row['tour_title'] . "</td>";
+    echo "<td>" . $row['tour_dt'] . "</td>";
+    echo "<td>" . $row['active_tour_id'] . "</td>";
+    if ($row['availability'] > 0 ) {
+        echo "<td><a href=\"/booking/book/id/$id\">Book Now</a></td>";
+    } else {
+        echo "<td>Booked Out</td>";
+        
+    }
+    echo  "</tr>";
+    
+}
+?>
+    </table>
 </div>
