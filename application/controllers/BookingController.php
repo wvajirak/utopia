@@ -28,7 +28,20 @@ class BookingController extends Zend_Controller_Action
            // die(print_r($formData));
             if ($form->isValid($formData)) {
             
-                Application_Service_QueryHelper::save($form);
+                //Application_Service_QueryHelper::save($form);
+                
+                $customer = new Application_Model_DbTable_Customers();
+                $customer_id = $customer->save( null,
+                                         $form->getValue('name_f'),
+                                         $form->getValue('name_l'),
+                                         $form->getValue('email'),
+                                         $form->getValue('phone'));
+                
+                $bokkings = new Application_Model_DbTable_Bookings();
+                $bokkings->save(null,
+                                $customer_id,
+                                $form->getValue('active_tour_id'),
+                                new Zend_Db_Expr('Now()'));
           
             } else {
                 

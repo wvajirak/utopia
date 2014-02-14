@@ -51,6 +51,13 @@
         <modelFile modelName="TourDate"/>
         <modelFile modelName="ActiveTour"/>
         <modelFile modelName="CoachType"/>
+        <modelFile modelName="ActiveToursMapper"/>
+        <modelFile modelName="BookingsMapper"/>
+        <modelFile modelName="CoachTypesMapper"/>
+        <modelFile modelName="CoachesMapper"/>
+        <modelFile modelName="CustomersMapper"/>
+        <modelFile modelName="TourDatessMapper"/>
+        <modelFile modelName="ToursMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>

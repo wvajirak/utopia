@@ -47,8 +47,14 @@ class Application_Service_QueryHelper {
         $select = $db->select()->setIntegrityCheck(false);
         $select->from(array('t0'=>'customers'),array("t0.*"))
                 ->join(array('t1'=>'bookings'),"t0.customer_id=t1.customer_id",array("t1.booking_id","t1.active_tour_id","t1.booking_dt"))
-                ->group(array('active_tour_id'));
+                ;
         return $select;
+    }
+    
+    public static function cancelBooking(){
+        $customers_db = new Zend_Db_Table('customers');
+        $bookings_db = new Zend_Db_Table('bookings');
+        
     }
     
 }
