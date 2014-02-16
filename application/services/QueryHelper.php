@@ -57,6 +57,26 @@ class Application_Service_QueryHelper {
         
     }
     
+    public static function remainingTours(){
+        $db = new Zend_Db_Table('tours');
+        $select = $db->select()->setIntegrityCheck(false);
+        $select->from(array('t0'=>'tours'),array("t0.*"))
+                ->joinLeft(array('t1'=>'active_tours'),"t0.tour_id=t1.tour_id",array())
+                ->where("t1.tour_id is null")
+                ;
+        return $select;
+    }
+    
+        public static function remainingDates(){
+        $db = new Zend_Db_Table('dates');
+        $select = $db->select()->setIntegrityCheck(false);
+        $select->from(array('t0'=>'dates'),array("t0.*"))
+                ->joinLeft(array('t1'=>'active_tours'),"t0.date_id=t1.date_id",array())
+                ->where("t1.date_id is null")
+                ;
+        return $select;
+    }
+    
 }
 
 ?>

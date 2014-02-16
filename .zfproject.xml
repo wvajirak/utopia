@@ -17,6 +17,10 @@
         </controllerFile>
         <controllerFile controllerName="Tour">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="date"/>
+          <actionMethod actionName="tour"/>
+          <actionMethod actionName="activeTours"/>
+          <actionMethod actionName="addActiveTours"/>
         </controllerFile>
         <controllerFile controllerName="Coach">
           <actionMethod actionName="index"/>
@@ -39,6 +43,9 @@
         <formFile formName="Booking"/>
         <formFile formName="AddCoach"/>
         <formFile formName="AddCoachType"/>
+        <formFile formName="ActiveTours"/>
+        <formFile formName="Date"/>
+        <formFile formName="Tour"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -110,6 +117,18 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="CancelBooking">
             <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="date"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="tour"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="activeTours"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="addActiveTours"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

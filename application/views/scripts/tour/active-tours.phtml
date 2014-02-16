@@ -1,0 +1,29 @@
+<br /><br />
+<div id="view-content">
+ <?php
+    echo "<a href=\"/tour/add-active-tours\">Create Active Tour</a>";
+ ?>
+    <table class="table">
+        <th>
+            <tr><td>Active Tour ID</td>
+            <td>Tour ID</td>
+            <td>Date ID</td>    
+        </th>
+
+<?php
+
+foreach($this->rows as $row) {
+    
+    
+ $id = $row['active_tour_id'];
+    echo "<tr>" ;
+    echo "<td>" . $row['active_tour_id'] . "</td>";
+    echo "<td>" . $row['tour_id'] . "</td>";
+    echo "<td>" . $row['date_id'] . "</td>";
+    
+    echo  "</tr>";
+    
+}
+?>
+    </table>
+</div>
