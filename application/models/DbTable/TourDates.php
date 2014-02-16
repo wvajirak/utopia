@@ -15,7 +15,7 @@ class Application_Model_DbTable_TourDates extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
     
-    public function delete($id){
+    public function deleteTourDate($id){
          $this->delete('date_id =' . (int)$id);
     }
     

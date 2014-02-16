@@ -15,7 +15,7 @@ class Application_Model_DbTable_Coaches extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
     
-    public function delete($id){
+    public function deleteCoach($id){
          $this->delete('coach_id =' . (int)$id);
     }
     

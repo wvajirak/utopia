@@ -15,7 +15,7 @@ class Application_Model_DbTable_Customers extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
     
-    public function delete($id){
+    public function deleteCustomer($id){
          $this->delete('customer_id =' . (int)$id);
     }
 

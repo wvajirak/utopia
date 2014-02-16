@@ -15,7 +15,7 @@ class Application_Model_DbTable_CoachTypes extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
     
-    public function delete($id){
+    public function deleteCoachType($id){
          $this->delete('type_id =' . (int)$id);
     }
     

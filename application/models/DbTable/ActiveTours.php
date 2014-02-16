@@ -15,7 +15,7 @@ class Application_Model_DbTable_ActiveTours extends Zend_Db_Table_Abstract
         return $row->toArray();
     }
     
-    public function delete($id){
+    public function deleteActiveTours($id){
          $this->delete('active_tour_id =' . (int)$id);
     }
     

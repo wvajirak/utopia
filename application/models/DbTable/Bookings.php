@@ -11,12 +11,13 @@ class Application_Model_DbTable_Bookings extends Zend_Db_Table_Abstract
         if (!$row) {
             throw new Exception("Could not find row $id");
         }
-        //die(print_r($row->toArray)); 
+//        die(print_r($row->toArray())); 
         return $row->toArray();
     }
     
-    public function delete($id){
-         $this->delete('booking_id =' . (int)$id);
+    public function deleteBooking($id){
+       // die('booking_id =' . $id);
+         $this->delete('booking_id =' . $id);
     }
     
     public function save($booking_id, $customer_id, $active_tour_id,$booking_dt){
