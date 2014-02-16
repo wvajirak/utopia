@@ -1,0 +1,30 @@
+<br /><br />
+<?php
+    echo "<a href=\"/coach/add-coach\">Add Coach</a>";
+ ?>
+<div id="view-content">
+    <table class="table">
+        <th>
+            <tr><td>Coach ID</td>
+            <td>Coach Reg</td>
+            <td>Coach Type</td>
+        </th>
+
+<?php
+
+foreach($this->rows as $row) {
+    
+    
+    $id = $row['coach_id'];
+    echo "<tr>" ;
+    echo "<td>" . $row['coach_id'] . "</td>";
+    echo "<td>" . $row['coach_reg'] . "</td>";
+    echo "<td>" . $row['type_id'] . "</td>";
+    echo "<td><a href=\"/coach/delete-coach/id/$id\">Delete</a></td>";
+    echo "<td><a href=\"/coach/edit-coach/id/$id\">Edit</a></td>";
+    echo  "</tr>";
+    
+}
+?>
+    </table>
+</div>

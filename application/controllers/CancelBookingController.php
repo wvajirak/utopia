@@ -33,8 +33,15 @@ class CancelBookingController extends Zend_Controller_Action
         $this->redirect("/cancel-booking/index"); 
     }
 
+    public function editAction()
+    {
+        // action body
+    }
+
 
 }
+
+
 
 
 
