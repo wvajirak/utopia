@@ -21,6 +21,12 @@
           <actionMethod actionName="tour"/>
           <actionMethod actionName="activeTours"/>
           <actionMethod actionName="addActiveTours"/>
+          <actionMethod actionName="addTours"/>
+          <actionMethod actionName="editTours"/>
+          <actionMethod actionName="deleteTours"/>
+          <actionMethod actionName="deleteDates"/>
+          <actionMethod actionName="addDates"/>
+          <actionMethod actionName="editDates"/>
         </controllerFile>
         <controllerFile controllerName="Coach">
           <actionMethod actionName="index"/>
@@ -129,6 +135,24 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Tour">
             <viewScriptFile forActionName="addActiveTours"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="addTours"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="editTours"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="deleteTours"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="deleteDates"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="addDates"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Tour">
+            <viewScriptFile forActionName="editDates"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

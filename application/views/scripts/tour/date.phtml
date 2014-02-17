@@ -1,4 +1,29 @@
 <br /><br />
 <div id="view-content">
-	<p>View script for controller <b>Tour</b> and script/action name <b>date</b></p>
+ <?php
+    echo "<a href=\"/tour/add-dates\">Create Tour Date</a>";
+ ?>
+    <table class="table">
+        <th>
+            <tr><td>Date ID</td>
+            <td>Tour Date</td>    
+        </th>
+
+<?php
+
+foreach($this->rows as $row) {
+    
+    
+ $id = $row['date_id'];
+    echo "<tr>" ;
+    echo "<td>" . $row['date_id'] . "</td>";
+    echo "<td>" . $row['tour_dt'] . "</td>";
+    echo "<td><a href=\"/tour/delete-dates/id/$id\">Delete</a></td>";
+    echo "<td><a href=\"/tour/edit-dates/id/$id\">Edit</a></td>";
+    
+    echo  "</tr>";
+    
+}
+?>
+    </table>
 </div>
