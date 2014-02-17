@@ -20,7 +20,7 @@ class Application_Form_Tour extends Zend_Form
             ->addValidator('NotEmpty');
         
         $coach_id = new Application_Form_CoachSelector('coach_id');
-        $coach_id->setLabel('Coach ID')
+        $coach_id->setLabel('Coach')
             ->setRequired(true)
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
